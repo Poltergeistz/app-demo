@@ -13,15 +13,28 @@
 ;; as (s-prefix "dct:title")
 
 ;; (add-prefix "dct" "http://purl.org/dc/terms/")
+;; (add-prefix "besluit" "http://data.vlaanderen.be/ns/besluit#")
+(add-prefix "mandaat" "http://data.vlaanderen.be/ns/mandaat#")
+(add-prefix "persoon" "http://data.vlaanderen.be/ns/persoon#")
+;; (add-prefix "generiek" "http://data.vlaanderen.be/ns/generiek#")
 
 
 ;;;;;
 ;; The following is the commented out version of those used in the
 ;; commented out domain.lisp.
 
-;; (add-prefix "dcat" "http://www.w3.org/ns/dcat#")
-;; (add-prefix "dct" "http://purl.org/dc/terms/")
-;; (add-prefix "skos" "http://www.w3.org/2004/02/skos/core#")
+(add-prefix "dcat" "http://www.w3.org/ns/dcat#")
+(add-prefix "dct" "http://purl.org/dc/terms/")
+(add-prefix "skos" "http://www.w3.org/2004/02/skos/core#")
+(add-prefix "foaf" "http://xmlns.com/foaf/0.1/")
+(add-prefix "adms" "https://www.w3.org/ns/adms#")
+(add-prefix "person" "http://www.w3.org/ns/person#")
+(add-prefix "org" "http://www.w3.org/ns/org#")
+(add-prefix "lblodlg" "http://data.lblod.info/vocabularies/leidinggevenden/")
+(add-prefix "schema" "http://schema.org/")
+(add-prefix "locn" "http://www.w3.org/ns/locn#")
+(add-prefix "vcard" "http://www.w3.org/2006/vcard/ns#")
+(add-prefix "adres" "https://data.vlaanderen.be/ns/adres")
 
 
 ;;;;;

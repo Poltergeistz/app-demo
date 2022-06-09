@@ -5,6 +5,8 @@ services:
     image: semtech/mu-identifier:1.9.1
     environment:
       SESSION_COOKIE_SECURE: "on"
+      DEFAULT_ACCESS_CONTROL_ALLOW_ORIGIN_HEADER: "*"
+      DEFAULT_MU_AUTH_ALLOWED_GROUPS_HEADER: "[{\"variables\":[],\"name\":\"public\"},{\"variables\":[],\"name\":\"clean\"}]"
     links:
       - dispatcher:dispatcher
     ports:
@@ -15,6 +17,12 @@ services:
       - resource:resource
     volumes:
       - ./config/dispatcher:/config
+  # database:
+  #   image: semtech/mu-authorization:0.6.0-beta.5
+  #   environment:
+  #     MU_SPARQL_ENDPOINT: "http://triplestore:8890/sparql"
+  #   volumes:
+  #     - ./config/authorization:/config
   database:
     image: redpencil/virtuoso:1.0.0
     environment:
@@ -31,3 +39,15 @@ services:
       - database:database
     volumes:
       - ./config/resources:/config
+  migrations:
+    image: semtech/mu-migrations-service
+    links:
+      - database:database
+    volumes:
+      - ./config/migrations:/data/migrations
+  yasgui:    
+    image: erikap/yasgui
+    environment:
+      DEFAULT_SPARQL_ENDPOINT: "http://triplestore:8890/sparql"
+
+
