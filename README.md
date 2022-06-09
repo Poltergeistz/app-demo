@@ -22,3 +22,20 @@ Boot your microservices-enabled system using docker-compose.
     docker-compose up
 
 You can shut down using `docker-compose stop` and remove everything using `docker-compose rm`.
+
+### Recap of the project
+
+#### What I've learned
+- How to assemble a stack.
+- How to make queries in SPARQL.
+- How to add a microservice to the stack.
+- How to get resources (still need to work on relationships).
+- How to load data into the database.
+- Routing.
+- A little part of Lisp and Elixir.
+
+#### What I'd like to learn more and feel less confident about
+- Authorization service.
+- How to CRUD data.
+- Migrations.
+- Some difficult SPARQL Queries.
